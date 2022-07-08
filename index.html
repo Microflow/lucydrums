@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html>
+  <body>
+<style>
+  @import url(https://fonts.googleapis.com/css?family=Quicksand:300,400);
+
+body {
+  font-size: 16px;
+  background: #070707;
+  font-family: 'Quicksand', sans-serif;
+}
+
+section {
+  position: relative;
+  width: 400px;
+  margin: 40px auto;
+  box-shadow: 1px 1px 4px rgba(0,0,0,.5);
+}
+
+.lucydrums-footer {
+  color: #bcbcbc;
+  font-weight: 100;
+  text-align: center;
+  font-size: 90px;
+  letter-spacing: -10px;
+}
+
+.rotate {
+  transform(rotate)20deg;
+}
+
+img {
+  display: block;
+}
+
+header {
+  background: #ecf0f1;
+  max-height: 190px;
+  background: rgba(236, 240, 241,.9);
+  overflow: hidden;
+}
+
+.left {
+ padding: 30px 30px;
+ float: left;
+ width: 190px; 
+
+}
+
+.right {
+  padding: 30px 0;
+ float: left;
+ width: 150px; 
+ text-align: center;
+}
+
+#play {
+  height: 40px;
+  width: 40px;
+  border: 0;
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/38816/1383113001_playback_play.png') center center no-repeat;
+  
+    &:focus {
+    outline: none;
+  }
+}
+
+#pause {
+  background: url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/38816/1383113014_playback_pause.png') center center no-repeat;
+  height: 30px;
+  width: 30px;
+  border: 0;
+  
+  &:focus {
+    outline: none;
+  }
+}
+
+.rec-name {
+  font-size: 1.5em;
+  color: #333;
+}
+ 
+.rec-subtitle {
+   margin: 5px 0; 
+   color: rgba(9, 5, 50,0.8);
+  font-size: 18px;
+  text-indent: 5px;
+ }
+
+  .rec-subtitle-2nd-line {
+     margin: 5px 0; 
+   color: rgba(9, 5, 52,0.8);
+  font-size: 18px;
+  text-indent: 7px;
+  }
+
+</style>
+
+<section>
+  <img src='https://s3-us-west-2.amazonaws.com/s.cdpn.io/577362/dark-darkness-loneliness-1446948.jpg' width="400">
+  <header>
+    <div class='left'>
+      <h1>Slow Down, Moonchild</h1>
+      <h2></h2>
+      <h2 class="rec-subtitle"> Dub Lips Mix.</h2>
+      <h2 class="rec-subtitle-2nd-line">Friday 8th July, 2022</h2>
+    </div>
+    <div class='right'>
+      
+    <audio id="demo" src="https://assets.codepen.io/577362/SLOW-DOWN-MOONCHILD_DUB_LIPS-MIX.mp3"></audio>
+    <button id='play'></button>
+    <button id='pause'></button>
+    </div>
+  </header>
+</section>
+
+<h1 class="lucydrums-footer">¿ &nbsp; lucydrums &nbsp;<span class="rotate">!</span></h1>
+
+<script>
+  document.getElementById("play").onclick = function() { 
+     document.getElementById('demo').play();
+}
+
+document.getElementById("pause").onclick = function() { 
+     document.getElementById('demo').pause();
+}
+</script>]
+  </body>
+</html>
